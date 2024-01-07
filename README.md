@@ -10,7 +10,7 @@ pip3 install -r requirements.txt
 ```
 ## Usage
 ```
-usage: crtsh-list.py [-h] -d DOMAIN [-o OUTPUT] [-g GREP]
+usage: crtsh-list.py [-h] -d DOMAIN [-o OUTPUT] [-g GREP] [-fs FILTERS]
 
 options:
   -h, --help            show this help message and exit
@@ -18,11 +18,17 @@ options:
                         Provide the name of the domain you want to search for.
   -o OUTPUT, --output OUTPUT
                         Provide a name for the output file if you want to save the output.
-  -g GREP, --grep GREP  Grep the output to only return results that include a specified word.
+  -g GREP, --grep GREP  Grep the output to only return results that includes the name of the domain.
+  -fs FILTERS, --filters FILTERS
+                        Filter out specific words from the output, such as www. or *. for example, you can filter multiple words using a comma (example: -fs *.,www).
 ```
 Output every result of the domain search:
 ```
 python3 crtsh-list.py -d example.com
+```
+Filter the output to remove results:
+```
+python3 crtsh-list.py -d example.com -fs *.,www
 ```
 Save every result of the domain search to a specified file (file gets created for you):
 ```
