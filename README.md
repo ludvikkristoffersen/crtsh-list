@@ -1,5 +1,5 @@
 ## About
-This script takes every result from a https://crt.sh/ search and removes any duplicates, it also lets the user grep and save the output. You can then use this list in further enumeration to see what domains and subdomains are alive or not.
+This script takes every result from a https://crt.sh/ search and removes any duplicates, it also lets the user grep and save the output. You can then use this list in further enumeration to see what domains and subdomains are alive or not alive.
 ## Installation
 ```
 git clone https://github.com/luddekn/crtsh-list
