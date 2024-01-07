@@ -9,6 +9,17 @@ Install the script requirements:
 pip3 install -r requirements.txt
 ```
 ## Usage
+```bash
+usage: crtsh-list.py [-h] -d DOMAIN [-o OUTPUT] [-g GREP]
+
+options:
+  -h, --help            show this help message and exit
+  -d DOMAIN, --domain DOMAIN
+                        Provide the name of the domain you want to search for.
+  -o OUTPUT, --output OUTPUT
+                        Provide a name for the output file if you want to save the output.
+  -g GREP, --grep GREP  Grep the output to only return results that includes a specified word.
+```
 Output every result of the domain search:
 ```
 python3 crtsh-list.py -d example.com
