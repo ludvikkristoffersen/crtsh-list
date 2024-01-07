@@ -9,7 +9,7 @@ Install the script requirements:
 pip3 install -r requirements.txt
 ```
 ## Usage
-```bash
+```
 usage: crtsh-list.py [-h] -d DOMAIN [-o OUTPUT] [-g GREP]
 
 options:
