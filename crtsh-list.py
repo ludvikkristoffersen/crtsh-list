@@ -2,6 +2,7 @@ from colorama import *
 from bs4 import BeautifulSoup
 import requests
 import argparse
+import os
 
 # Require a "domain" argument from the user
 parser = argparse.ArgumentParser()
@@ -12,6 +13,11 @@ args = parser.parse_args()
 
 # Append the user-specified domain to the url and make the request
 url = f"https://crt.sh/?q={args.domain}"
+
+# Check if filename provided exists before making the request
+if os.path.isfile(args.output):
+    print(Fore.RED + f"The file '{Fore.WHITE + args.output + Style.RESET_ALL + Fore.RED}' allready exists, quitting.")
+    quit()
 # Try the GET request, if there are any problems then display the except message
 try:
     response = requests.get(url)
