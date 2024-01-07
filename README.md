@@ -6,7 +6,7 @@ git clone https://github.com/luddekn/crtsh-list
 ```
 Install the script requirements:
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 ## Usage
 Output every result of the domain search:
