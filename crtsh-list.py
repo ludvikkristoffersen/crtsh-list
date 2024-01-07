@@ -35,7 +35,7 @@ def output_grep_filter():
         file.close()
     for site in result_list:
         if all(filter not in site for filter in filters_list):
-            if args.domain in site:
+            if args.grep in site:
                 with open(args.output, "a") as file:
                     file.write(site + "\n")
                     file.close()
