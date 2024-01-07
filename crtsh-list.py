@@ -33,20 +33,24 @@ def output_grep_filter():
     filters_list = [filter.strip() for filter in filters_list]
     with open(args.output, "x") as file:
         file.close()
-    for site in result_list:
+    for id, site in enumerate(result_list):
         if all(filter not in site for filter in filters_list):
             if args.grep in site:
                 with open(args.output, "a") as file:
-                    file.write(site + "\n")
+                    file.write(site)
+                    if id < len(result_list) - 1:
+                        file.write("\n")
                     file.close()
                 print(site)
 def output_grep():
     with open(args.output, "x") as file:
         file.close()
-    for site in result_list:
+    for id, site in enumerate(result_list):
         if args.grep in site:
             with open(args.output, "a") as file:
-                file.write(site + "\n")
+                file.write(site)
+                if id < len(result_list) - 1:
+                    file.write("\n")
                 file.close()
             print(site)
 def output_filter():
@@ -54,10 +58,12 @@ def output_filter():
     filters_list = [filter.strip() for filter in filters_list]
     with open(args.output, "x") as file:
         file.close()
-    for site in result_list:
+    for id, site in enumerate(result_list):
         if all(filter not in site for filter in filters_list):
             with open(args.output, "a") as file:
-                file.write(site + "\n")
+                file.write(site)
+                if id < len(result_list) - 1:
+                    file.write("\n")
                 file.close()
             print(site)
 def grep_filter():
@@ -70,9 +76,11 @@ def grep_filter():
 def output():
     with open(args.output, "x") as file:
         file.close()
-    for site in result_list:
+    for id, site in enumerate(result_list):
         with open(args.output, "a") as file:
-            file.write(site + "\n")
+            file.write(site)
+            if id < len(result_list) - 1:
+                file.write("\n")
             file.close()
         print(site)
 def grep():
