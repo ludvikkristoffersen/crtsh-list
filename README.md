@@ -1,5 +1,5 @@
 ## About
-A Python script aimed towards bug bounty hunters and penetration testers that outputs every result from a crt.sh search, removes any duplicate domain or subdomain from that result, and lets the user only output domains and subdomains that include a specific word, it also allows the user to save the results to a file to use in further enumeration
+A Python script aimed towards bug bounty hunters and penetration testers that outputs every result from a crt.sh search, removes any duplicate domain or subdomain from that result, and lets the user only output domains and subdomains that include a specific word, it also allows the user to save the results to a file to use in further enumeration!
 ## Installation
 ```
 git clone https://github.com/luddekn/crtsh-list
