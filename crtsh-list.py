@@ -8,8 +8,8 @@ import os
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--domain", required=True, help="Provide the name of the domain you want to search for.")
 parser.add_argument("-o", "--output", required=False, help="Provide a name for the output file if you want to save the output.")
-parser.add_argument("-g", "--grep", required=False, help="Grep the output to only return results that includes the name of the domain.")
-parser.add_argument("-fs", "--filters", required=False, help="Filter out specific words from the output, such as www. or *. for example.")
+parser.add_argument("-g", "--grep", required=False, help="Grep the output to only return results that include the name of the domain.")
+parser.add_argument("-fs", "--filters", required=False, help="Filter out specific words from the output, such as www. or *. for example, you can filter multiple words using a comma (example: -fs *.,www).")
 args = parser.parse_args()
 
 # Append the user-specified domain to the url and make the request
