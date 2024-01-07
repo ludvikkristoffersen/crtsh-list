@@ -18,7 +18,7 @@ options:
                         Provide the name of the domain you want to search for.
   -o OUTPUT, --output OUTPUT
                         Provide a name for the output file if you want to save the output.
-  -g GREP, --grep GREP  Grep the output to only return results that includes a specified word.
+  -g GREP, --grep GREP  Grep the output to only return results that include a specified word.
 ```
 Output every result of the domain search:
 ```
